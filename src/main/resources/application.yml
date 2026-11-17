@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: java-spring-boot-aes-256-gcm-ex1
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  crypto:
+    # Base64-encoded 32-byte AES key; set AES_KEY_BASE64 in the environment.
+    key-base64: ${AES_KEY_BASE64}

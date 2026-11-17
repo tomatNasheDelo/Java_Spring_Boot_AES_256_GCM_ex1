@@ -1,2 +1,16 @@
-# Java_Spring_Boot_AES_256_GCM_ex1
-Educational Java Spring Boot demo of authenticated symmetric encryption with AES-256-GCM using the Java Cryptography Architecture.
+# Spring Boot AES-256-GCM demo
+
+Учебный REST-проект о симметричном аутентифицированном шифровании через Java Cryptography Architecture (JCA). Используется `AES/GCM/NoPadding`, 256-битный ключ и новый случайный 96-битный nonce для каждого шифрования.
+
+## Быстрый старт
+
+Требуются JDK 17+ и Gradle 8+. Сгенерируйте ключ, экспортируйте его в `AES_KEY_BASE64`, затем запустите:
+
+```bash
+export AES_KEY_BASE64="$(openssl rand -base64 32)"
+gradle bootRun
+```
+
+Инструкция для Windows PowerShell, примеры API, тесты и важные ограничения находятся в [`start.txt`](start.txt).
+
+> Это демонстрация криптографического API, а не готовый сервис для работы с чувствительными данными. Не коммитьте ключи и не используйте один ключ во многих средах.
